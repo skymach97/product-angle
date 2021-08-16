@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Shourya Mundra",
+    "gender": "pujipuji",
+    "username": "shourya",
+    "email": "user@shourya.io",
+    "photo": "user-1.jpg",
+    "password": "$2a$12$Q0grHjH9PXc6SxivC8m12.2mZJ9BbKcgFpwSG4Y1ZEII8HJVzWeyS"
+  },
+  {
+    "name": "Lourdes Browning",
+    "gender": "male",
+    "username": "lourdes",
+    "email": "loulou@example.com",
+    "photo": "user-2.jpg",
+    "password": "$2a$12$hP1h2pnNp7wgyZNRwPsOTeZuNzWBv7vHmsR3DT/OaPSUBQT.y0S.."
+  },
+  {
+    "name": "Sophie Louise Hart",
+    "gender": "female",
+    "username": "sophie",
+    "email": "sophie@example.com",
+    "photo": "user-3.jpg",
+    "password": "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
+  },
+  {
+    "name": "Ayla Cornell",
+    "gender": "female",
+    "username": "ayla",
+    "email": "ayls@example.com",
+    "photo": "user-4.jpg",
+    "password": "$2a$12$tm33.M/4pfEbZF64WbFuHuVFv85v4qEhi.ik8njbud7yaoqCZpjiy"
+  },
+  {
+    "name": "Leo Gillespie",
+    "gender": "female",
+    "username": "leo",
+    "email": "leo@example.com",
+    "photo": "user-5.jpg",
+    "password": "$2a$12$OOPr90tBEBF1Iho3ox0Jde0O/WXUR0VLA5xdh6tWcu7qb.qOCvSg2"
+  },
+
+  {
+    "name": "Lisa Brown",
+    "gender": "female",
+    "username": "lisa",
+    "email": "lisa@example.com",
+    "photo": "user-20.jpg",
+    "password": "$2a$12$uA9FsDw63v6dkJKGlLQ/8ufYBs8euB7kqIQewyYlZXU5azEKeLEky"
+  }
+]
