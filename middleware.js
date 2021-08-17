@@ -51,3 +51,14 @@ module.exports.validateReview = (req, res, next) => {
     next();
   }
 };
+
+module.exports.isProfileOwner = async (req, res, next) => {
+  const { user_id } = req.params;
+  const id = req.user._id;
+  console.log("the logged in id", id, "params id", user_id);
+  if (id != user_id) {
+    req.flash("error", "You do not have permission to do that!");
+    return res.redirect(`/product/${id}`);
+  }
+  next();
+};

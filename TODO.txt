@@ -1,2 +1,2 @@
 (+) Paginate, Search, Filter is to be added
-(+) User can edit and delete himself
+(+) Add user edit and delete in views.

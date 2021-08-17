@@ -1,18 +1,11 @@
 const User = require("../models/user");
 
-const filterObj = (obj, ...allowedFields) => {
-  const newObj = {};
-  Object.keys(obj).forEach((el) => {
-    if (allowedFields.includes(el)) newObj[el] = obj[el];
-  });
-  return newObj;
-};
-
 module.exports.renderRegister = (req, res) => {
   res.render("users/register");
 };
 
 module.exports.register = async (req, res, next) => {
+  console.log(req.body);
   try {
     const { email, username, gender, password } = req.body;
     const user = new User({ email, username, gender });
@@ -78,5 +71,30 @@ module.exports.favorites = async (req, res, next) => {
     data: {
       favorites,
     },
+  });
+};
+
+module.exports.deleteUser = function (req, res) {
+  User.findById(req.params.user_id, async function (err, user) {
+    if (err) {
+      req.flash("error", err.message);
+      return res.redirect("back");
+    }
+    user.remove();
+    res.redirect("/");
+  });
+};
+
+module.exports.updateUser = function (req, res) {
+  User.findById(req.params.user_id, async function (err, user) {
+    if (err) {
+      req.flash("error", err.message);
+    } else {
+      user.gender = req.body.gender;
+      user.username = req.body.username;
+      user.save();
+      req.flash("success", "Updated your profile!");
+      res.redirect("/me/");
+    }
   });
 };

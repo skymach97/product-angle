@@ -4,6 +4,7 @@ const passport = require("passport");
 const catchAsync = require("../utils/catchAsync");
 const User = require("../models/user");
 const users = require("../controllers/users");
+const { isLoggedIn, isProfileOwner } = require("../middleware");
 
 router.get("/about", function (req, res) {
   res.render("about");
@@ -26,6 +27,9 @@ router
     }),
     users.login
   );
+
+router.put("/users/:user_id", isLoggedIn, isProfileOwner, users.updateUser);
+router.delete("/users/:user_id", isLoggedIn, isProfileOwner, users.deleteUser);
 
 router.route("/favourite").get(catchAsync(users.favorites));
 router
